@@ -68,6 +68,10 @@ public static class InternalDefaults
             EditWithAppPath = "",
             EditWithAppName = "",
             ApplyToAllSelected = false,
+            DefaultExternalApplicationId = null,
+            // Unlike PDF/image/email settings, losing these on exit would mean setting the programs up again
+            RememberExternalApplications = true,
+            ExternalApplications = ImmutableList<NAPS2.ExternalApplications.ExternalApplicationDefinition>.Empty,
             ManualDuplexSettings = new ManualDuplexSettings
             {
                 AlwaysShowPreview = true,

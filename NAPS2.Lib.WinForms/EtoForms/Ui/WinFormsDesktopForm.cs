@@ -370,6 +370,7 @@ public class WinFormsDesktopForm : DesktopForm
             item.FirstImage = ((ActionCommand) command1).GetIconImage(IconScenario.SmallToolbar, scale).ToSD();
             item.SecondImage = ((ActionCommand) command2).GetIconImage(IconScenario.SmallToolbar, scale).ToSD();
         });
+        item.Enabled = command1.Enabled;
         command1.EnabledChanged += (_, _) => item.Enabled = command1.Enabled;
         item.FirstClick += (_, _) => command1.Execute();
         item.SecondClick += (_, _) => command2.Execute();
@@ -398,6 +399,7 @@ public class WinFormsDesktopForm : DesktopForm
                 menuItem.ShortcutKeys = swfKeys;
             }
         }
+        item.Enabled = command.Enabled;
         command.EnabledChanged += (_, _) => item.Enabled = command.Enabled;
         if (item is WF.ToolStripSplitButton button)
         {

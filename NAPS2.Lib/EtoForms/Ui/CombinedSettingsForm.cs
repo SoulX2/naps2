@@ -39,6 +39,10 @@ internal class CombinedSettingsForm : EtoDialogBase
             new ImageSettingsPanel(this, dialogHelper),
             new EmailSettingsPanel(this)
         ];
+        if (OperatingSystem.IsWindows())
+        {
+            _panels.Add(new ExternalApplicationsPanel(this, desktopFormProvider));
+        }
         if (PlatformCompat.System.SupportsKeyboardShortcuts)
         {
             _panels.Add(new KeyboardShortcutsPanel(this, ksm, desktopFormProvider));

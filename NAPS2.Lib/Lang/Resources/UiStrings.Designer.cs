@@ -2066,5 +2066,203 @@ namespace NAPS2.Lang.Resources {
                 return ResourceManager.GetString("ButtonsLabel", resourceCulture);
             }
         }
+        
+        internal static string PassToApplication {
+            get {
+                return ResourceManager.GetString("PassToApplication", resourceCulture);
+            }
+        }
+        
+        internal static string DocumentPassedToApplication {
+            get {
+                return ResourceManager.GetString("DocumentPassedToApplication", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppNoPages {
+            get {
+                return ResourceManager.GetString("ExternalAppNoPages", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppOcrNotAvailable {
+            get {
+                return ResourceManager.GetString("ExternalAppOcrNotAvailable", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppExecutableInvalid {
+            get {
+                return ResourceManager.GetString("ExternalAppExecutableInvalid", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppExecutableNotFound {
+            get {
+                return ResourceManager.GetString("ExternalAppExecutableNotFound", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppArgumentsInvalid {
+            get {
+                return ResourceManager.GetString("ExternalAppArgumentsInvalid", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalArgsUnterminatedQuote {
+            get {
+                return ResourceManager.GetString("ExternalArgsUnterminatedQuote", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalArgsUnknownPlaceholder {
+            get {
+                return ResourceManager.GetString("ExternalArgsUnknownPlaceholder", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalArgsFilesNotAlone {
+            get {
+                return ResourceManager.GetString("ExternalArgsFilesNotAlone", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalArgsNoDocument {
+            get {
+                return ResourceManager.GetString("ExternalArgsNoDocument", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalApps {
+            get {
+                return ResourceManager.GetString("ExternalApps", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppsManage {
+            get {
+                return ResourceManager.GetString("ExternalAppsManage", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppAdd {
+            get {
+                return ResourceManager.GetString("ExternalAppAdd", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppEdit {
+            get {
+                return ResourceManager.GetString("ExternalAppEdit", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppDisabledFormat {
+            get {
+                return ResourceManager.GetString("ExternalAppDisabledFormat", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppFormTitle {
+            get {
+                return ResourceManager.GetString("ExternalAppFormTitle", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppNameLabel {
+            get {
+                return ResourceManager.GetString("ExternalAppNameLabel", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppProgramLabel {
+            get {
+                return ResourceManager.GetString("ExternalAppProgramLabel", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppProgramFiles {
+            get {
+                return ResourceManager.GetString("ExternalAppProgramFiles", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppArgumentsLabel {
+            get {
+                return ResourceManager.GetString("ExternalAppArgumentsLabel", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppPlaceholdersHint {
+            get {
+                return ResourceManager.GetString("ExternalAppPlaceholdersHint", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppPagesLabel {
+            get {
+                return ResourceManager.GetString("ExternalAppPagesLabel", resourceCulture);
+            }
+        }
+        
+        internal static string AllPages {
+            get {
+                return ResourceManager.GetString("AllPages", resourceCulture);
+            }
+        }
+        
+        internal static string SelectedPages {
+            get {
+                return ResourceManager.GetString("SelectedPages", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppIncludeOcr {
+            get {
+                return ResourceManager.GetString("ExternalAppIncludeOcr", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppEnabled {
+            get {
+                return ResourceManager.GetString("ExternalAppEnabled", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppNameRequired {
+            get {
+                return ResourceManager.GetString("ExternalAppNameRequired", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppClearAfterPassing {
+            get {
+                return ResourceManager.GetString("ExternalAppClearAfterPassing", resourceCulture);
+            }
+        }
+        
+        internal static string PassToApplicationName {
+            get {
+                return ResourceManager.GetString("PassToApplicationName", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppSetDefault {
+            get {
+                return ResourceManager.GetString("ExternalAppSetDefault", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppClearDefault {
+            get {
+                return ResourceManager.GetString("ExternalAppClearDefault", resourceCulture);
+            }
+        }
+        
+        internal static string ExternalAppDefaultFormat {
+            get {
+                return ResourceManager.GetString("ExternalAppDefaultFormat", resourceCulture);
+            }
+        }
     }
 }

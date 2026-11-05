@@ -1149,4 +1149,103 @@ If your scanner doesn't support "Duplex" scanning, follow these instructions:
   <data name="ButtonsLabel" xml:space="preserve">
     <value>Buttons:</value>
   </data>
+  <data name="PassToApplication" xml:space="preserve">
+    <value>Pass to application</value>
+  </data>
+  <data name="DocumentPassedToApplication" xml:space="preserve">
+    <value>Document passed to {0}</value>
+  </data>
+  <data name="ExternalAppNoPages" xml:space="preserve">
+    <value>There are no pages to pass to {0}.</value>
+  </data>
+  <data name="ExternalAppOcrNotAvailable" xml:space="preserve">
+    <value>{0} is set up to use OCR, but OCR isn't enabled or installed.</value>
+  </data>
+  <data name="ExternalAppExecutableInvalid" xml:space="preserve">
+    <value>The program for {0} must be the full path of an .exe file: {1}</value>
+  </data>
+  <data name="ExternalAppExecutableNotFound" xml:space="preserve">
+    <value>The program for {0} wasn't found: {1}</value>
+  </data>
+  <data name="ExternalAppArgumentsInvalid" xml:space="preserve">
+    <value>The arguments for {0} are invalid: {1}</value>
+  </data>
+  <data name="ExternalArgsUnterminatedQuote" xml:space="preserve">
+    <value>A double quote isn't closed.</value>
+  </data>
+  <data name="ExternalArgsUnknownPlaceholder" xml:space="preserve">
+    <value>Unknown placeholder {0}.</value>
+  </data>
+  <data name="ExternalArgsFilesNotAlone" xml:space="preserve">
+    <value>{files} must be a separate argument.</value>
+  </data>
+  <data name="ExternalArgsNoDocument" xml:space="preserve">
+    <value>The arguments must contain {file}, {files} or {directory}.</value>
+  </data>
+  <data name="ExternalApps" xml:space="preserve">
+    <value>External applications</value>
+  </data>
+  <data name="ExternalAppsManage" xml:space="preserve">
+    <value>Manage applications...</value>
+  </data>
+  <data name="ExternalAppAdd" xml:space="preserve">
+    <value>Add...</value>
+  </data>
+  <data name="ExternalAppEdit" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="ExternalAppDisabledFormat" xml:space="preserve">
+    <value>{0} (disabled)</value>
+  </data>
+  <data name="ExternalAppFormTitle" xml:space="preserve">
+    <value>External application</value>
+  </data>
+  <data name="ExternalAppNameLabel" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="ExternalAppProgramLabel" xml:space="preserve">
+    <value>Program (.exe):</value>
+  </data>
+  <data name="ExternalAppProgramFiles" xml:space="preserve">
+    <value>Programs</value>
+  </data>
+  <data name="ExternalAppArgumentsLabel" xml:space="preserve">
+    <value>Parameters:</value>
+  </data>
+  <data name="ExternalAppPlaceholdersHint" xml:space="preserve">
+    <value>Placeholders: {file} {files} {directory} {filename} {pageCount} {format}</value>
+  </data>
+  <data name="ExternalAppPagesLabel" xml:space="preserve">
+    <value>Pages:</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>All pages</value>
+  </data>
+  <data name="SelectedPages" xml:space="preserve">
+    <value>Selected pages</value>
+  </data>
+  <data name="ExternalAppIncludeOcr" xml:space="preserve">
+    <value>Include OCR text (uses the OCR settings)</value>
+  </data>
+  <data name="ExternalAppEnabled" xml:space="preserve">
+    <value>Enabled (shown in the menu)</value>
+  </data>
+  <data name="ExternalAppNameRequired" xml:space="preserve">
+    <value>Please enter a name.</value>
+  </data>
+  <data name="PassToApplicationName" xml:space="preserve">
+    <value>Pass to {0}</value>
+  </data>
+  <data name="ExternalAppSetDefault" xml:space="preserve">
+    <value>Set as default</value>
+  </data>
+  <data name="ExternalAppClearDefault" xml:space="preserve">
+    <value>Remove as default</value>
+  </data>
+  <data name="ExternalAppDefaultFormat" xml:space="preserve">
+    <value>{0} (default)</value>
+  </data>
+  <data name="ExternalAppClearAfterPassing" xml:space="preserve">
+    <value>Clear passed images once the program has started</value>
+  </data>
 </root>

@@ -121,6 +121,8 @@ public class DesktopSubFormController : IDesktopSubFormController
 
     public void ShowToolbarSettingsForm() => ShowSettingsForm<ToolbarSettingsPanel>();
 
+    public void ShowExternalApplicationsSettingsForm() => ShowSettingsForm<ExternalApplicationsPanel>();
+
     private void ShowSettingsForm<T>() where T : SettingsPanel
     {
         var form = _formFactory.Create<CombinedSettingsForm>();

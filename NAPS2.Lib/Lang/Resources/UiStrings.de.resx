@@ -1035,4 +1035,103 @@ If your scanner doesn't support "Duplex" scanning, follow these instructions:
   <data name="ButtonsLabel" xml:space="preserve">
     <value>Buttons:</value>
   </data>
+  <data name="PassToApplication" xml:space="preserve">
+    <value>An Anwendung übergeben</value>
+  </data>
+  <data name="DocumentPassedToApplication" xml:space="preserve">
+    <value>Das Dokument wurde an {0} übergeben</value>
+  </data>
+  <data name="ExternalAppNoPages" xml:space="preserve">
+    <value>Es gibt keine Seiten, die an {0} übergeben werden können.</value>
+  </data>
+  <data name="ExternalAppOcrNotAvailable" xml:space="preserve">
+    <value>{0} ist für OCR eingerichtet, aber OCR ist nicht aktiviert oder nicht installiert.</value>
+  </data>
+  <data name="ExternalAppExecutableInvalid" xml:space="preserve">
+    <value>Das Programm für {0} muss der vollständige Pfad einer .exe-Datei sein: {1}</value>
+  </data>
+  <data name="ExternalAppExecutableNotFound" xml:space="preserve">
+    <value>Das Programm für {0} wurde nicht gefunden: {1}</value>
+  </data>
+  <data name="ExternalAppArgumentsInvalid" xml:space="preserve">
+    <value>Die Argumente für {0} sind ungültig: {1}</value>
+  </data>
+  <data name="ExternalArgsUnterminatedQuote" xml:space="preserve">
+    <value>Ein Anführungszeichen wird nicht geschlossen.</value>
+  </data>
+  <data name="ExternalArgsUnknownPlaceholder" xml:space="preserve">
+    <value>Unbekannter Platzhalter {0}.</value>
+  </data>
+  <data name="ExternalArgsFilesNotAlone" xml:space="preserve">
+    <value>{files} muss ein eigenes Argument sein.</value>
+  </data>
+  <data name="ExternalArgsNoDocument" xml:space="preserve">
+    <value>Die Argumente müssen {file}, {files} oder {directory} enthalten.</value>
+  </data>
+  <data name="ExternalApps" xml:space="preserve">
+    <value>Externe Anwendungen</value>
+  </data>
+  <data name="ExternalAppsManage" xml:space="preserve">
+    <value>Anwendungen verwalten...</value>
+  </data>
+  <data name="ExternalAppAdd" xml:space="preserve">
+    <value>Hinzufügen...</value>
+  </data>
+  <data name="ExternalAppEdit" xml:space="preserve">
+    <value>Bearbeiten...</value>
+  </data>
+  <data name="ExternalAppDisabledFormat" xml:space="preserve">
+    <value>{0} (deaktiviert)</value>
+  </data>
+  <data name="ExternalAppFormTitle" xml:space="preserve">
+    <value>Externe Anwendung</value>
+  </data>
+  <data name="ExternalAppNameLabel" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="ExternalAppProgramLabel" xml:space="preserve">
+    <value>Programm (.exe):</value>
+  </data>
+  <data name="ExternalAppProgramFiles" xml:space="preserve">
+    <value>Programme</value>
+  </data>
+  <data name="ExternalAppArgumentsLabel" xml:space="preserve">
+    <value>Parameter:</value>
+  </data>
+  <data name="ExternalAppPlaceholdersHint" xml:space="preserve">
+    <value>Platzhalter: {file} {files} {directory} {filename} {pageCount} {format}</value>
+  </data>
+  <data name="ExternalAppPagesLabel" xml:space="preserve">
+    <value>Seiten:</value>
+  </data>
+  <data name="AllPages" xml:space="preserve">
+    <value>Alle Seiten</value>
+  </data>
+  <data name="SelectedPages" xml:space="preserve">
+    <value>Ausgewählte Seiten</value>
+  </data>
+  <data name="ExternalAppIncludeOcr" xml:space="preserve">
+    <value>OCR-Text einbetten (verwendet die OCR-Einstellungen)</value>
+  </data>
+  <data name="ExternalAppEnabled" xml:space="preserve">
+    <value>Aktiviert (wird im Menü angezeigt)</value>
+  </data>
+  <data name="ExternalAppNameRequired" xml:space="preserve">
+    <value>Bitte geben Sie einen Namen ein.</value>
+  </data>
+  <data name="PassToApplicationName" xml:space="preserve">
+    <value>An {0} übergeben</value>
+  </data>
+  <data name="ExternalAppSetDefault" xml:space="preserve">
+    <value>Als Standard festlegen</value>
+  </data>
+  <data name="ExternalAppClearDefault" xml:space="preserve">
+    <value>Nicht mehr Standard</value>
+  </data>
+  <data name="ExternalAppDefaultFormat" xml:space="preserve">
+    <value>{0} (Standard)</value>
+  </data>
+  <data name="ExternalAppClearAfterPassing" xml:space="preserve">
+    <value>Übergebene Bilder entfernen, sobald das Programm gestartet ist</value>
+  </data>
 </root>

@@ -23,5 +23,6 @@ public interface IDesktopSubFormController
     void ShowAboutForm();
     void ShowSettingsForm();
     void ShowToolbarSettingsForm();
+    void ShowExternalApplicationsSettingsForm();
     void ShowManualDuplexForm();
 }

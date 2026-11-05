@@ -2,6 +2,7 @@ using Autofac;
 using NAPS2.EtoForms;
 using NAPS2.EtoForms.Desktop;
 using NAPS2.EtoForms.Notifications;
+using NAPS2.ExternalApplications;
 using NAPS2.ImportExport;
 using NAPS2.Ocr;
 using NAPS2.Pdf;
@@ -36,6 +37,9 @@ public class GuiModule : Module
         builder.RegisterType<DesktopFormProvider>().AsSelf().SingleInstance();
         builder.RegisterType<ImageListActions>().AsSelf().SingleInstance();
         builder.RegisterType<EditWithController>().AsSelf().SingleInstance();
+        builder.RegisterType<ExternalDocumentExporter>().As<IExternalDocumentExporter>();
+        builder.RegisterType<ExternalProcessStarter>().As<IExternalProcessStarter>();
+        builder.RegisterType<ExternalApplicationController>().AsSelf().SingleInstance();
         builder.RegisterInstance(EtoPlatform.Current.DarkModeProvider);
         builder.RegisterInstance(EtoPlatform.Current.ColorScheme);
 
