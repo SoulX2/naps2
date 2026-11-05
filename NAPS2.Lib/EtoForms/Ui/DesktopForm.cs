@@ -366,6 +366,10 @@ public abstract class DesktopForm : EtoFormBase
                 .Append(Commands.PdfSettings));
         if (PlatformCompat.System.CanPrint && ShowButton(ToolbarButtons.Print))
             CreateToolbarButton(Commands.Print);
+        if (Commands.CreateExternalApplicationsMenu() is { } externalAppsMenu &&
+            ShowButton(ToolbarButtons.ExternalApplications))
+            CreateToolbarButtonWithMenu(Commands.ExternalApplicationsMenu, DesktopToolbarMenuType.ExternalApplications,
+                externalAppsMenu);
         separatorPending = true;
         if (ShowButton(ToolbarButtons.Image))
             CreateToolbarMenu(Commands.ImageMenu, new MenuProvider()
@@ -568,7 +572,9 @@ public abstract class DesktopForm : EtoFormBase
                 Commands.Delete.Enabled = ImageList.Selection.Any();
         Commands.SavePdf.Enabled = Commands.SaveImages.Enabled = Commands.ClearAll.Enabled =
             Commands.ReorderMenu.Enabled =
-                Commands.EmailPdf.Enabled = Commands.Print.Enabled = ImageList.Images.Any();
+                Commands.EmailPdf.Enabled = Commands.Print.Enabled =
+                    Commands.ExternalApplicationsMenu.Enabled = ImageList.Images.Any();
+        Commands.UpdateExternalApplicationCommands();
 
         // "All" dropdown items
         Commands.SaveAllPdf.Text = Commands.SaveAllImages.Text = Commands.EmailAll.Text =

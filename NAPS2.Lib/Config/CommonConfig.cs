@@ -1,6 +1,7 @@
 ﻿using System.Collections.Immutable;
 using NAPS2.Config.Model;
 using NAPS2.Escl;
+using NAPS2.ExternalApplications;
 using NAPS2.ImportExport.Email;
 using NAPS2.ImportExport.Images;
 using NAPS2.Pdf;
@@ -237,4 +238,14 @@ public class CommonConfig
 
     [User]
     public bool ApplyToAllSelected { get; set; }
+
+    [Common]
+    public Guid? DefaultExternalApplicationId { get; set; }
+
+    [Common]
+    public bool RememberExternalApplications { get; set; }
+
+    [Common]
+    public ImmutableList<ExternalApplicationDefinition> ExternalApplications { get; set; } =
+        ImmutableList<ExternalApplicationDefinition>.Empty;
 }

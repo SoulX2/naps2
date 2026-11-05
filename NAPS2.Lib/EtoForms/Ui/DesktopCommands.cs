@@ -1,4 +1,5 @@
 using NAPS2.EtoForms.Desktop;
+using NAPS2.ExternalApplications;
 
 namespace NAPS2.EtoForms.Ui;
 
@@ -14,11 +15,14 @@ public class DesktopCommands
     private readonly Naps2Config _config;
     private readonly DesktopFormProvider _desktopFormProvider;
     private readonly EditWithController _editWithController;
+    private readonly ExternalApplicationController _externalApplicationController;
+    private List<(ExternalApplicationDefinition App, ActionCommand Command)> _externalApplicationCommands = [];
 
     public DesktopCommands(DesktopController desktopController, DesktopScanController desktopScanController,
         IDesktopSubFormController desktopSubFormController, UiImageList imageList, ImageListActions imageListActions,
         ThumbnailController thumbnailController, IIconProvider iconProvider, Naps2Config config,
-        DesktopFormProvider desktopFormProvider, EditWithController editWithController)
+        DesktopFormProvider desktopFormProvider, EditWithController editWithController,
+        ExternalApplicationController externalApplicationController)
     {
         _desktopController = desktopController;
         _desktopScanController = desktopScanController;
@@ -30,6 +34,7 @@ public class DesktopCommands
         _config = config;
         _desktopFormProvider = desktopFormProvider;
         _editWithController = editWithController;
+        _externalApplicationController = externalApplicationController;
 
 
         Scan = new ActionCommand(desktopScanController.ScanDefault)
@@ -132,6 +137,15 @@ public class DesktopCommands
         {
             Text = UiStrings.Print,
             IconName = "printer"
+        };
+        ExternalApplicationsMenu = new ActionCommand(PassToDefaultExternalApplication)
+        {
+            Text = UiStrings.PassToApplication,
+            IconName = "application_cascade"
+        };
+        ManageExternalApplications = new ActionCommand(desktopSubFormController.ShowExternalApplicationsSettingsForm)
+        {
+            Text = UiStrings.ExternalAppsManage
         };
         ImageMenu = new ActionCommand
         {
@@ -372,7 +386,8 @@ public class DesktopCommands
             _iconProvider,
             _config,
             _desktopFormProvider,
-            _editWithController);
+            _editWithController,
+            _externalApplicationController);
     }
 
     public ActionCommand CreateEditWithApp() => new(_imageListActions.EditWithApp)
@@ -383,6 +398,54 @@ public class DesktopCommands
         IconName = "pencil",
         Image = _editWithController.AppIcon
     };
+
+    public MenuProvider? CreateExternalApplicationsMenu()
+    {
+        if (!OperatingSystem.IsWindows())
+        {
+            return null;
+        }
+        var defaultApp = _externalApplicationController.DefaultApplication;
+        // A click passes the document right away, so the button says where it's going
+        ExternalApplicationsMenu.Text = defaultApp != null
+            ? string.Format(UiStrings.PassToApplicationName, defaultApp.Name.Replace("&", "&&"))
+            : UiStrings.PassToApplication;
+        _externalApplicationCommands = _externalApplicationController.Applications
+            .Select(app => (app, new ActionCommand(() => _externalApplicationController.SendTo(app))
+            {
+                MenuText = app.Name.Replace("&", "&&"),
+                IconName = app == defaultApp ? "accept" : null
+            }))
+            .ToList();
+        UpdateExternalApplicationCommands();
+        var menu = new MenuProvider();
+        foreach (var (_, command) in _externalApplicationCommands)
+        {
+            menu.Append(command);
+        }
+        return menu.Separator().Append(ManageExternalApplications);
+    }
+
+    private async Task PassToDefaultExternalApplication()
+    {
+        var app = _externalApplicationController.DefaultApplication;
+        if (app != null && _externalApplicationController.HasPagesFor(app))
+        {
+            await _externalApplicationController.SendTo(app);
+        }
+        else
+        {
+            _desktopFormProvider.DesktopForm.ShowToolbarMenu(DesktopToolbarMenuType.ExternalApplications);
+        }
+    }
+
+    public void UpdateExternalApplicationCommands()
+    {
+        foreach (var (app, command) in _externalApplicationCommands)
+        {
+            command.Enabled = _externalApplicationController.HasPagesFor(app);
+        }
+    }
 
     public ImageListActions ImageListActions => _imageListActions;
 
@@ -408,6 +471,8 @@ public class DesktopCommands
     public ActionCommand EmailSelected { get; set; }
     public ActionCommand EmailSettings { get; set; }
     public ActionCommand Print { get; set; }
+    public ActionCommand ExternalApplicationsMenu { get; set; }
+    public ActionCommand ManageExternalApplications { get; set; }
     public ActionCommand ImageMenu { get; set; }
     public ActionCommand ViewImage { get; set; }
     public ActionCommand Crop { get; set; }

@@ -25,5 +25,6 @@ public enum ToolbarButtons
     Donate = 1 << 18,
     Sidebar = 1 << 19,
     ManualDuplex =  1 << 20,
-    Interleave =  1 << 21
+    Interleave =  1 << 21,
+    ExternalApplications = 1 << 22
 }

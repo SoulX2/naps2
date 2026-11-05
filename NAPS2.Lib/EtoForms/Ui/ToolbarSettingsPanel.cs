@@ -64,6 +64,8 @@ internal class ToolbarSettingsPanel : SettingsPanel
             yield return (ToolbarButtons.EmailPdf, UiStrings.EmailPdf);
         if (PlatformCompat.System.CanPrint)
             yield return (ToolbarButtons.Print, UiStrings.Print);
+        if (OperatingSystem.IsWindows())
+            yield return (ToolbarButtons.ExternalApplications, UiStrings.PassToApplication);
         yield return (ToolbarButtons.Image, UiStrings.Image);
         yield return (ToolbarButtons.Rotate, UiStrings.Rotate);
         yield return (ToolbarButtons.Move, UiStrings.MoveUpDown);
